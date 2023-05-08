@@ -24,11 +24,11 @@ def startTestingNumbers():
     print("Started Testing Numbers.")
     db = numDB()
     used_list = db.getDB()
-    print("used_list:", used_list)
-    if used_list == []:
-        used_list.append(RealDictRow([('num', 1)]))
+    #print("used_list:", used_list)
+    #if used_list == []:
+        #used_list.append(RealDictRow([('num', 1)]))
     latest_num = (used_list[-1])['num']
-    for i in range(latest_num, latest_num + 1_000_000):
+    for i in range(latest_num + 1, latest_num + 1_000_000):
         testNumber(i)
     startTestingNumbers()
 
