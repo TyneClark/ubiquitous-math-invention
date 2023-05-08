@@ -2,14 +2,6 @@ import os
 import psycopg2
 import psycopg2.extras
 import urllib.parse
-#import sqlite3
-
-# first, use sqlite in terminal to create a database and table:
-# CREATE TABLE <tablename> (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER, genre TEXT);
-
-#def dict_factory(cursor, row):
-    #fields = [column[0] for column in cursor.description]
-    #return {key: value for key, value in zip(fields, row)}
 
 class numDB:
 
