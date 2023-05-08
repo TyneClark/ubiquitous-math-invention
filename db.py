@@ -11,7 +11,7 @@ import urllib.parse
     #fields = [column[0] for column in cursor.description]
     #return {key: value for key, value in zip(fields, row)}
 
-class DB:
+class numDB:
 
     def __init__(self):
         #self.connection = sqlite3.connect("cart_db.db")

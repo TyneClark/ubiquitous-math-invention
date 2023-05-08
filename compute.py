@@ -1,7 +1,7 @@
 from db import *
 
 def testNumber(num):
-    db = DB()
+    db = numDB()
     used_list = db.getDB()
     num_before_change = num
     steps = []
@@ -21,8 +21,10 @@ def testNumber(num):
     db.createItem(num_before_change)
 
 def startTestingNumbers():
-    db = DB()
+    print("Started Testing Numbers.")
+    db = numDB()
     used_list = db.getDB()
+    print("used_list:", used_list)
     latest_num = used_list[-1]
     for i in range(latest_num, latest_num + 1_000_000):
         testNumber(i)
