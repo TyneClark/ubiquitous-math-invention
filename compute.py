@@ -31,7 +31,7 @@ def startTestingNumbers():
         testNumber(i)
     print("10,000 numbers tested")
     print(i, "was the last number tested")
-    print("Testing another 1,000 numbers now.")
+    print("Testing another 10,000 numbers now.")
     startTestingNumbers()
 
 
