@@ -42,3 +42,17 @@ class numDB:
         records = self.cursor.fetchall()
         return records
     
+    def getOne(self, data):
+        # Query the database for a matching record
+        self.cursor.execute("SELECT * FROM db WHERE num = %s", (data))
+
+        # Fetch the result
+        result = self.cursor.fetchone()
+
+        # Check if a matching record was found
+        if result is not None:
+            #A record with the same num already exists in the database
+            return True
+        else:
+            # it is a new record
+            return False

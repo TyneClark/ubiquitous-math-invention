@@ -12,7 +12,7 @@ def testNumber(num):
         steps.append(num)
         if num % 2 == 0:
             num = num / 2
-            if num in used_list:
+            if db.getOne(num): # if the number already exists in the db then we can skip further calculations
                 break
         if num % 2 == 1:
             num = (3*num) + 1
