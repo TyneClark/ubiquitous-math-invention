@@ -21,16 +21,17 @@ def testNumber(num):
     db.createItem(num_before_change)
 
 def startTestingNumbers():
-    print("Started Testing Numbers.")
     db = numDB()
     used_list = db.getDB()
     #print("used_list:", used_list)
     #if used_list == []:
         #used_list.append(RealDictRow([('num', 1)]))
     latest_num = (used_list[-1])['num']
-    for i in range(latest_num, latest_num + 1_000):
+    for i in range(latest_num, latest_num + 10_000):
         testNumber(i)
-    print("1,000 numbers tested, ending with:", i)
+    print("10,000 numbers tested")
+    print(i, "was the last number tested")
+    print("Testing another 1,000 numbers now.")
     startTestingNumbers()
 
 
