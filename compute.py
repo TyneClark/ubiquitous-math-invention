@@ -29,7 +29,7 @@ def startTestingNumbers():
     #if used_list == []:
         #used_list.append(RealDictRow([('num', 1)]))
     latest_num = (used_list[-1])['num']
-    for i in range(latest_num, latest_num + 10_000):
+    for i in range(latest_num + 1, latest_num + 10_000):
         testNumber(i)
     print(i, "was the last number tested of the above 10,000")
     startTestingNumbers()
