@@ -21,6 +21,8 @@ def testNumber(num):
     db.createItem(num_before_change)
 
 def startTestingNumbers():
+    print("Testing has begun.")
+    print("10,000 numbers are being tested")
     db = numDB()
     used_list = db.getDB()
     #print("used_list:", used_list)
@@ -29,9 +31,7 @@ def startTestingNumbers():
     latest_num = (used_list[-1])['num']
     for i in range(latest_num, latest_num + 10_000):
         testNumber(i)
-    print("10,000 numbers tested")
-    print(i, "was the last number tested")
-    print("Testing another 10,000 numbers now.")
+    print(i, "was the last number tested of the above 10,000")
     startTestingNumbers()
 
 
