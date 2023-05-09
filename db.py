@@ -42,9 +42,10 @@ class numDB:
         records = self.cursor.fetchall()
         return records
     
-    def getOne(self, data):
+    def getOne(self, num):
+        data = [num]
         # Query the database for a matching record
-        self.cursor.execute("SELECT * FROM db WHERE num = %s", (data))
+        self.cursor.execute("SELECT * FROM db WHERE num = (%s)", data)
 
         # Fetch the result
         result = self.cursor.fetchone()
